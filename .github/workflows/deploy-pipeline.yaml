@@ -81,7 +81,7 @@ jobs:
     needs: build
     steps:
       - name: Download artifact to upload after
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: zipped-bundle
       - name: Configure AWS credentials
