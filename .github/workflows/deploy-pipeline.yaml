@@ -80,6 +80,7 @@ jobs:
 
   upload:
     runs-on: ubuntu-latest
+    needs: build
     steps:
       - name: Download artifact to upload after
         uses: actions/download-artifact@v2
