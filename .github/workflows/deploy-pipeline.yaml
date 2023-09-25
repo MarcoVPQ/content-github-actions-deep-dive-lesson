@@ -3,6 +3,8 @@ on: [push]
 permissions:
   id-token: write
   contents: read
+  issues: write
+  pull-requests: write
 
 jobs:
   lint:
@@ -81,7 +83,7 @@ jobs:
     needs: publish
     steps:
       - name: Download artifact to upload after
-        uses: actions/download-artifact@v1
+        uses: actions/download-artifact@v2
         with:
           name: zipped-bundle
       - name: Configure AWS credentials
